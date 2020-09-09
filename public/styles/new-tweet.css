@@ -34,33 +34,37 @@ button {
 } */
 
 #tweet-header {
-  width: 90%;
+  /* width: 90%; */
   /* padding: 2em; */
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   background-color: #f4f1ec;
   background-image: none;
   height: fit-content;
-  margin: 0 10px 0 0px;
+  /* margin: 0 10px 0 0px; */
 
 }
 
-#tweet-header span {
+#tweet-header p {
   width: fit-content;
   /* display: flex;
   flex-direction: row-reverse;
   justify-content: space-between; */
   margin-left: 20px;
-  margin-right: 200px; 
+  /* margin-right: 200px;  */
 }
 
-#tweet-header p {
-  padding-left: 15px;
-  padding-right: 20px;
+#tweet-header span {
+  /* padding-left: 15px;
+  padding-right: 20px; */
+  opacity: 0;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: lighter;
-  margin-left: 200px;
+  /* margin-left: 200px; */
+}
+#tweet-header div {
+  display: flex;
 }
 
 #tweet-header img {
@@ -96,4 +100,8 @@ footer > span {
 .tweet-example:hover {
   border: #819494 solid;
   box-shadow: 3px 3px 5px 6px rgb(113, 199, 186)
+}
+
+.tweet-example:hover #tweet-header span {
+  opacity: 1;
 }

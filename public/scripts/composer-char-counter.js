@@ -3,7 +3,7 @@ $(document).ready(function() {
   // --- our code goes here ---
   const $tweet = $('#tweet-text')
 
-  $tweet.on('keyup', function event() { //this points to the textarea #tweet-text
+  $tweet.on('keydown', function event() { //this points to the textarea #tweet-text
     console.log('this', this)
     const limit = 140
     const length = $(this).val().length;
@@ -16,7 +16,9 @@ $(document).ready(function() {
     $('#tweetcounter').text(remainingChars);
     if (length > 140) {
       $('#tweetcounter').css('color','red');
-    } 
+    } else {
+      $('#tweetcounter').css('color','black');
+    }
   
   })
 });
