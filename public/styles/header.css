@@ -7,7 +7,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  margin-top: 95px; /* Add a bottom margin to avoid content overlay */
 } 
 
 .testimage {
@@ -32,8 +32,10 @@ header {
   
 }
 
-h2 {
+/* h2 {
   display: flex;
   justify-content: center;
 
-}
+} */
+/* Not needed h2? */
+

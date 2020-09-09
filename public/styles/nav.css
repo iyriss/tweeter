@@ -7,7 +7,9 @@ nav {
   display: flex; 
   justify-content: space-between;
   font-family: "Source Sans Pro", sans-serif;
-  
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the bottom of the page */
+  width: 100%; /* Full width */
 }
 
 .logo {

@@ -16,7 +16,8 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
+    <!-- External icons -->
+    <script src="https://kit.fontawesome.com/90e4eb8664.js" crossorigin="anonymous"></script>
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
   </head>
@@ -39,8 +40,8 @@
   </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
-        <h2></h2>
+      <section>
+        <h2>Welcome back!</h2>
         <form method="POST" action="/tweets">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
@@ -48,6 +49,22 @@
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" id="tweetcounter" for="tweet-text">140</output>
           </div>
+          <article class="tweet-example">
+            <header id = "tweet-header">
+                <img src="https://www.shareicon.net/data/512x512/2016/05/24/770126_man_512x512.png">
+                <span>Aidan Sky</span>
+                <p>@SirNewton</p>
+            </header>
+            <p>If I have seen further it is by standing on the shoulders of giants.</p>
+            <footer>
+            <p>10 days ago</p>
+            <span>
+            <i class="fas fa-flag"></i> 
+            <i class="far fa-heart"></i>
+            <i class="fas fa-retweet"></i>
+            </span>
+            </footer>
+          </article>
         </form>
       </section>
     </main>
