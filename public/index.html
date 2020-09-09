@@ -16,6 +16,8 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    
     <!-- External icons -->
     <script src="https://kit.fontawesome.com/90e4eb8664.js" crossorigin="anonymous"></script>
     <!-- App JS -->
@@ -49,27 +51,30 @@
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" id="tweetcounter" for="tweet-text">140</output>
           </div>
-          <article class="tweet-example">
-            <header id = "tweet-header">
-              <div>
-                <img src="https://www.shareicon.net/data/512x512/2016/05/24/770126_man_512x512.png">
-                <p>Isaac Newton</p>
-              </div>
-                <span>@SirNewton</span>
-            </header>
-            <p>If I have seen further it is by standing on the shoulders of giants.</p>
-            <footer>
-            <p>10 days ago</p>
-            <span>
-            <i class="fas fa-flag"></i> 
-            <i class="far fa-heart"></i>
-            <i class="fas fa-retweet"></i>
-            </span>
-            </footer>
-          </article>
         </form>
+      </section>
+      <section id="tweets-container">
+      <!-- <article class="tweet-example">
+        <header id = "tweet-header">
+          <div id="posts">
+            <img src="https://www.shareicon.net/data/512x512/2016/05/24/770126_man_512x512.png">
+            <p>Isaac Newton</p>
+          </div>
+            <span>@SirNewton</span>
+        </header>
+        <p>If I have seen further it is by standing on the shoulders of giants.</p>
+        <footer>
+        <p>10 days ago</p>
+        <span>
+        <i class="fas fa-flag"></i> 
+        <i class="far fa-heart"></i>
+        <i class="fas fa-retweet"></i>
+        </span>
+        </footer>
+      </article> -->
       </section>
     </main>
     <script src="/scripts/composer-char-counter.js"></script>
+    <script src="/scripts/client.js"></script>
   </body>
 </html>
