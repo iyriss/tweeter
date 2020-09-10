@@ -29,15 +29,15 @@
 //     "created_at": 1461113959088
 //   }
 // ];
-
+$(document).ready(function (){
 const createTweetElement = function (tweetData) {
   let $tweet = '';
 
-  let user = tweetData.user.name;
-  let avatar = tweetData.user.avatars;
-  let handle = tweetData.user.handle;
-  let content = tweetData.content.text;
-  let createdAt = tweetData.createdAt;
+  const user = tweetData.user.name;
+  const avatar = tweetData.user.avatars;
+  const handle = tweetData.user.handle;
+  const content =escape(tweetData.content.text);
+  const createdAt = tweetData.createdAt;
 
   $tweet =
     `
@@ -83,21 +83,29 @@ const loadTweets = function () {
   });
 };
 
-$(document).ready(function (){
+    
+    const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+  const validate = (msg) => {
+    $(".container").prepend($(".new-tweet-error").text(msg).slideDown().delay(2000).hide(300));
+  }
     $("#new-tweet").on("submit", function (event) {
     event.preventDefault();
     const tweetBox = $(this);
     const isValid = tweetBox.find("#tweet-text").val().length;
     
     if (isValid === 0) {
-      alert("Field cannot be empty, don't be shy tweet something 😜");
+      validate("⚠️⚠️Field cannot be empty, don't be shy tweet something 😜");
       return false;
     }
     if (isValid > 140) {
-      alert("Oops! That is longer than 140 characters. Long story short? 😊");
+      validate("⚠️⚠️Oops! That is longer than 140 characters. Long story short?");
       return false;
     }
-   
+    $("new-tweet-error").removeClass("active");
     $.ajax('/tweets', {method: 'POST', data: $("#new-tweet").serialize()})
       .then(function () { //only once the response came back to the server
         loadTweets();

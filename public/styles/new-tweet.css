@@ -107,3 +107,18 @@ footer > span {
 .tweet-example:hover #tweet-header span {
   opacity: 1;
 }
+
+/* .new-tweet-error {
+  display: none;
+} */
+
+.new-tweet-error {
+  display: none;
+  /* background-color: red; */
+  color: salmon;
+  border-style: solid;
+  border-color: red;
+  border-width: 1px;
+  padding: 10px;
+  margin-bottom: 15px;
+}

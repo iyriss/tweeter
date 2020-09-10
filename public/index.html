@@ -39,18 +39,19 @@
       </div>
       <br>
       <div>
-          <h2>Your Name</h2>
+          <p><b>Ada </b>Lovelace</p>
       </div>
     </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <div class="new-tweet-error"></div>
       <section id="new-tweet-container">
         <h2>Welcome back!</h2>
         <form id="new-tweet" name="new-tweet">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div>
-            <button type="submit">Tweet</button>
+            <button class="submit-tweet" type="submit">Tweet</button>
             <output name="counter" class="counter" id="tweetcounter" for="tweet-text">140</output>
           </div>
         </form>
