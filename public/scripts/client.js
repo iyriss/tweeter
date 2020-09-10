@@ -86,13 +86,22 @@ const loadTweets = function () {
 $(document).ready(function (){
     $("#new-tweet").on("submit", function (event) {
     event.preventDefault();
-    // console.log( $(this).serialize() );
-    // console.log("test")
-    // console.log(event)
+    const tweetBox = $(this);
+    const isValid = tweetBox.find("#tweet-text").val().length;
+    
+    if (isValid === 0) {
+      alert("Field cannot be empty, don't be shy tweet something 😜");
+      return false;
+    }
+    if (isValid > 140) {
+      alert("Oops! That is longer than 140 characters. Long story short? 😊");
+      return false;
+    }
+   
     $.ajax('/tweets', {method: 'POST', data: $("#new-tweet").serialize()})
       .then(function () { //only once the response came back to the server
         loadTweets();
-    // console.log(this)
+    
     }).fail(err => {
       console.log(err);
     });;
