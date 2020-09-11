@@ -97,10 +97,6 @@ footer > span {
   opacity: 1
 }
 
-/* }, .far-fa-hear, .fas-fa-retweet:hover{
-  opacity: 1;
-} */
-
 .new-tweet-error {
   display: none;
   color: salmon;

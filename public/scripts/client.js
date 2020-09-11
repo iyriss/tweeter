@@ -22,9 +22,9 @@ $(document).ready(function() {
       <footer>
         <p>${createdAt}</p>
         <span class="icons">
-          <i class="flag"></i> 
-          <i class="heart"></i>
-          <i class="retweet"></i>
+        <i class="fas fa-flag"></i> 
+        <i class="far fa-heart"></i>
+        <i class="fas fa-retweet"></i>
         </span>
       </footer>
     </article>
