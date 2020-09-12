@@ -12,7 +12,7 @@ button {
   width: 100%;
 }
 
-.counter  {
+#tweetcounter  {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -20,33 +20,23 @@ button {
 }
 
 #tweet-header {
-  /* width: 90%; */
-  /* padding: 2em; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: #f4f1ec;
   background-image: none;
   height: fit-content;
-  /* margin: 0 10px 0 0px; */
 }
 
 #tweet-header p {
   width: fit-content;
-  /* display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between; */
   margin-left: 20px;
-  /* margin-right: 200px;  */
 }
 
 #tweet-header span {
-  /* padding-left: 15px;
-  padding-right: 20px; */
   opacity: 0;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: lighter;
-  /* margin-left: 200px; */
 }
 
 #tweet-header div {
@@ -61,6 +51,7 @@ button {
 article > p {
   border-bottom: 3px solid;
   padding-bottom: 20px;
+  word-wrap: break-word;
 }
 
 footer {

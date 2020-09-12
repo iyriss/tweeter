@@ -15,3 +15,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+!["Screenshot of desktop view"](https://github.com/iyriss/tweeter/blob/master/docs/DesktopView.png?raw=true)
+!["Screenshot of mobile view"](https://github.com/iyriss/tweeter/blob/master/docs/TabletView.png?raw=true)
+!["Screenshot of mobile view showing an error"](https://github.com/iyriss/tweeter/blob/master/docs/TabletView_ShowingError.png?raw=true)
+
+

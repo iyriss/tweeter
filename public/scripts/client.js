@@ -1,5 +1,5 @@
-$(document).ready(function() {
-  const createTweetElement = function(tweetData) {
+$(document).ready(() => {
+  const createTweetElement = (tweetData) => {
     let $tweet = '';
 
     const user = tweetData.user.name;
@@ -32,15 +32,15 @@ $(document).ready(function() {
     return $tweet;
   };
 
-  const renderTweets = function(tweets) {
+  const renderTweets = (tweets) => {
     $("#tweets-container").empty();
-    tweets.forEach(function(element) {
+    tweets.forEach((element) => {
       let $tweet = createTweetElement(element);
       $("#tweets-container").prepend($tweet);
     });
   };
 
-  const loadTweets = function() {
+  const loadTweets = () => {
     $.ajax('/tweets')
       .then(res => {
         console.log(res);
@@ -51,7 +51,7 @@ $(document).ready(function() {
   };
 
     
-  const escape =  function(str) {
+  const escape = (str) => {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -61,9 +61,9 @@ $(document).ready(function() {
     $(".container").prepend($(".new-tweet-error").text(msg).slideDown().delay(2000).hide(300));
   };
 
-  $("#new-tweet").on("submit", function(event) {
+  $("#new-tweet").on("submit", (event) => {
     event.preventDefault();
-    const tweetBox = $(this);
+    const tweetBox = $(event.currentTarget);
     const isValid = tweetBox.find("#tweet-text").val().length;
     
     if (isValid === 0) {
@@ -76,9 +76,10 @@ $(document).ready(function() {
     }
     $("new-tweet-error").removeClass("active");
     $.ajax('/tweets', {method: 'POST', data: $("#new-tweet").serialize()})
-      .then(function() { //only once the response came back to the server
+      .then(() => { //only once the response came back to the server
         $("#tweet-text").val("");
         loadTweets();
+        $("#tweetcounter").val("140");
       }).fail(err => {
         console.log(err);
       });
